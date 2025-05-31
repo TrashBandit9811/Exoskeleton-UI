@@ -45,6 +45,10 @@ This project is designed for real-time mode switching, configuration and intuiti
 
 ## Other important files
 For additional documentation, refer to:
-**wiring.md**
-**ui-layout.md**
-**setup.md**1
+- **wiring.md**: GPIO pinout and button/buzzer connections
+- **ui-layout.md**
+- **setup.md**
+
+
+## Notes
+This project is actively under development
