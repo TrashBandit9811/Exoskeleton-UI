@@ -1,0 +1,7 @@
+kivy[base]~=2.3.0 # Kivy framework, with only base dependencies
+pyglet==2.0.14 # Pyglet for multimedia handling
+RPi.GPIO # Raspberry Pi GPIO library
+evdev # For handling input devices
+Pillow # Python Imaging Library for image handling
+
+# AÑADIR A DOCUMENTACIÓN: COMO INSTALAR LAS DEPENDENCIAS
