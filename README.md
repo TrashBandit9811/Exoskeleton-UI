@@ -24,8 +24,19 @@ This project is designed for real-time mode switching, configuration and intuiti
 ## Setup Instructions
 
 ### 1.  Setup Raspberry Pi
-- ???
-- ???
+#### Needed Hardware
+- Raspberry Pi 4 Model B
+- Official 7" Raspberry Pi Touschreen display
+- 4 jumper cables (female to female)
+- DSI ribbon cable 
+- Official power supply highly recommended (5V 3A)
+- Screwdriver
+- Antistatic towel
+
+#### Physical Connection
+You can follow the steps in [this video](https://www.youtube.com/watch?v=SIUfAIiSzJA&ab_channel=MakeUseOf)
+- Place your towel on your working table, then the touchscreen display facing down
+- Insert the power wires
 
 ### 2. Flash & Configure SD Card
 - ???
