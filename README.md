@@ -63,7 +63,7 @@ This is the correct order to connect:
 *red* to pin 4 (5V)  
 
 ### 2. Flash & Configure SD Card
-- Go to [this link](https://www.raspberrypi.com/software/) for the latest Raspberry Pi Imager
+- In your computer, go to [this link](https://www.raspberrypi.com/software/) for the latest Raspberry Pi Imager
 - Download the version for your operating system
 - Insert your Micro SD card into your computer. Backup any data, the whole card will be **erased**
 - In Raspberry Pi Imager, click **Choose OS**, then select **Raspberry Pi OS (32-Bit)**
@@ -74,9 +74,26 @@ This is the correct order to connect:
 
 - Once these steps are completed, mount your Raspberry touchscreen and Raspberry Pi to your frame. Be careful not to damage the jumper cables or the DSI ribbon. Use a screwdriver to hold it in place
 
+NOTE: if your Raspberry Pi screen is upside down, you will need to complete the following steps
+- Go to the terminal and run
+```bash
+sudo nano /boot/config.txt
+```
+At the top of the file, add the following text:
+```bash
+lcd_rotate=2
+```
+
 ### 3. Enable Interfaces
-- ???
-- ???
+```bash
+sudo raspi-config
+```
+- Use your arrow keys to navigate
+- Go to **Interface Options**
+- ??? Enable SSH
+- Enable I2C
+- Go back and go to **Advanced Options**, then select **Expand Filesystem**
+
 
 ### 4. Install Dependencies
 - ???
