@@ -36,7 +36,23 @@ This project is designed for real-time mode switching, configuration and intuiti
 #### Physical Connection
 You can follow the steps in [this video](https://www.youtube.com/watch?v=SIUfAIiSzJA&ab_channel=MakeUseOf)
 - Place your towel on your working table, then the touchscreen display facing down
-- Insert the power wires
+- Insert the four power wires, and the DSI ribbon cable (blue side down). Ensure it is securely locked with the catch. It should look as it is shown in the following image:
+![texto de prueba](assets/images/touchscreen-connection.jpg)
+The following colors are used:
+*black* for GND
+*yellow* for SCL
+*green* for SDA
+*red* for 5V
+
+- Mount the raspberry on top of the touchscreen, make sure the screw holes are correcly aligned.
+![texto de prueba 2](assets/images/raspberry-on-top-of-touchscreen.jpg)
+
+- Use the screwdriver and the screws included in the box to secure the Raspberry Pi. Next, connect the jumper cables to the Raspberry in the correct order
+![texto de prueba 3](assets/images/raspberry-and-touchscreen-connection.jpg)
+*black* to pin 6 (GND)
+*yellow* to pin 5 (GPIO/SCL1) **I2C**
+*green* to pin 3 (GPIO/SDA1) **I2C**
+*red* to pin 4 (5V)
 
 ### 2. Flash & Configure SD Card
 - ???
