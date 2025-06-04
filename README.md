@@ -21,7 +21,7 @@ This project is designed for real-time mode switching, configuration and intuiti
 | Audio Feedback       | Passive buzzer on GPIO           |
 | Power Supply         | ???                              |
 | Micro SD card        | 32GB minumum, A1 or A2           |
-----------------------------------------------------------
+-----------------------------------------------------------
 
 ## Setup Instructions
 
@@ -56,11 +56,12 @@ The following colors are used:
 
 - Use the screwdriver and the screws included in the box to secure the Raspberry Pi. Next, connect the jumper cables to the Raspberry in the correct order, and the DSI ribbon cable (again, blue side down), make sure it was securely locked in place.  
 ![texto de prueba 3](assets/images/raspberry-and-touchscreen-connection.jpg)
-This is the correct order to connect:  
-*black* to pin 6 (GND)  
-*yellow* to pin 5 (GPIO/SCL1) **I2C**  
-*green* to pin 3 (GPIO/SDA1) **I2C**  
-*red* to pin 4 (5V)  
+This is the correct order to connect to the physical pins:  
+BE CAREFUL TO USE PHYSICAL PINS AND NOT BCM
+*black* to physical pin 6 (GND)  
+*yellow* to physical pin 5 (GPIO/SCL1) **I2C**  
+*green* to phisical pin 3 (GPIO/SDA1) **I2C**  
+*red* to physical pin 4 (5V)  
 
 ### 2. Flash & Configure SD Card
 - In your computer, go to [this link](https://www.raspberrypi.com/software/) for the latest Raspberry Pi Imager
