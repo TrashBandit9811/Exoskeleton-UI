@@ -6,10 +6,10 @@ from kivy.uix.button import Button
 import RPi.GPIO as GPIO
 
 # LEFT pins
-LEFT_LEDS = [11,13,15]
+LEFT_LEDS = [17,27,22]
 
 # RIGHT pins
-RIGHT_LEDS = [36,38,40]
+RIGHT_LEDS = [16,20,21]
 
 class RokiScreen(BoxLayout):
     text = StringProperty("")
