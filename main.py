@@ -48,6 +48,61 @@ class RokiApp(App):
         screen = RokiScreen()
         return screen
     
+    """
+    Inicio
+    MODO 0
+    cambiar modo a "INICIO"
+    
+    MODO C
+    Si toca pantalla derecha:
+        Selecciona acción derecha
+        Cambia imagen derecha a "Ir a sentado rojo"
+        Si toca botón derecho:
+            Encender LED derecho 2
+            Cambiar ambas acciones a "Preparado amarillo"
+            Si toca botón derecho:
+                Regresa a MODO C
+    
+    Si toca pantalla izquierda:
+        Selecciona acción izquierda
+        Cambiar imagen izquierda a parado azul
+        
+        MODO B
+        Si toca botón derecho:
+            Cambia modo a "PARADO"
+            Enciende LED izquierdo 1
+            Cambia imagen izquierda a "PRIMER PASO"
+            Si toca pantalla izquierda:
+                Selecciona "DAR PRIMER PASO"
+                Cambia imagen izquierda a "DAR PRIMER PASO"
+                Selecciona acción izquierda
+                Si toca botón derecho:
+                    Cambia modo a "CAMINANDO"
+                    Apaga LED izquierdo 1
+                    Enciende LED izquierdo 2
+                    Cambia imagen izquierda a "DAR PASO IZQUIERDO"
+                    Cambia imagen derecha a "Ir a sentado"
+                
+                MODO A
+                Si toca botón derecho:
+                    Apaga LED izquierdo 2
+                    Enciende LED izquierdo 3
+                    Cambia imagen izquierda a "DAR PASO DERECHO"
+                    Si toca botón derecho:
+                        Cambia imagen izquierda a "DAR PASO IZQUIERDO"
+                        Apaga LED izquierdo 3
+                        Enciende LED derecho 1
+                        Si toca botón derecho:
+                            Cambia a MODO A
+
+        Si toca pantalla derecha:
+            Selecciona acción derecha
+            Cambia imagen derecha a "PARADO AZUL"
+            Si toca botón derecho:
+                Apaga LED derecho 1
+                Regresa a MODO B
+    
+    """
 
     def on_stop(self):
         #Resetear LEDs al cerrar la aplicación
