@@ -1,67 +1,70 @@
-# 🦾 Exoskeleton UI
-# Raspberry Pi Touchscreen Interface
+# 🦾 Interfaz gráfica para Exoesqueleto 
+# Interfaz gráfica con Raspberry Pi y pantalla táctil
 
-This project is a graphical menu system created with **Python** and **Kivy** and designed to run on a **Raspberry Pi 4**, with a 7" touchscreen.
+Este proyecto es un sistema de menú creado con **Python** y **Kivy** y diseñado para correr en un **Raspberry Pi 4** con una pantalla táctil oficial de Raspberry de 7".
 
-This project is designed for real-time mode switching, configuration and intuitive control
+Este proyecto está diseñado para cambio de modos en tiempo real, configuración y control intuitivo.
 
-## Features
+## Características
 
-- Full-screen 800x480 UI with touch and physical buttons
-- Operational mode for visual feedback
-- Buzzer-based feedback system
-- Clean hardware-software integration
+-Interfaz de usuario a pantalla completa de 800x480 con pantalla táctil y botones físicos
+-Modo operativo con retroalimentación visual
+-Sistema de retroalimentación mediante buzzer
+-Integración limpia entre hardware y software
 
 ## Hardware
-| Component            | Details                          |
-| ---------------------|----------------------------------|
-| Raspberry Pi         | 4 Model B (2GB RAM)              |
-| Touchscreen display  | 7" Official Raspberry Pi Display |
-| External Buttons     | GPIO-connected tactile switches  |
-| Audio Feedback       | Passive buzzer on GPIO           |
-| Power Supply         | ???                              |
-| Micro SD card        | 32GB minumum, A1 or A2           |
------------------------------------------------------------
 
-## Setup Instructions
+| Componente                  | Detalles                         |
+| ----------------------------|----------------------------------|
+| Raspberry Pi                | 4 Modelo B (2GB RAM)             |
+| Touchscreen display         | 7" Official Raspberry Pi Display |
+| Botones                     | 2 botones externos por GPIO      |
+| Retroalimentación auditiva  | Buzzer en GPIO                   |
+| Fuente de alimentación      | ???                              |
+| Tarjeta micro SD            | 32GB mínimo, A1 o A2             |
+------------------------------------------------------------------
 
-#### Needed Hardware
-- Raspberry Pi 4 Model B
-- Official 7" Raspberry Pi Touschreen display
-- A computer (Windows, macOS or Linux)
-- Raspberry Pi Touchscreen Frame
-- Micro SD card (32GB minumum)
-- Micro SD card reader
-- 4 jumper cables (female to female)
-- DSI ribbon cable 
-- Official power supply highly recommended (5V 3A)
-- Screwdriver
-- Antistatic towel
+## Instructiones de instalación
 
-### 1.  Setup Raspberry Pi
+#### Hardware necesario
+- Raspberry Pi 4 Modelo B
+- Pantalla táctil oficial Raspberry de 7"
+- Una computadora (Windows, macOS o Linux)
+- Marco para pantalla táctil de Raspberry
+- Tarjeta micro SD(32GB mínimo)
+- Lector de tarjetas micro SD
+- 4 cables puente (hembra a hembra)
+- Cinta DSI (incluida en el paquete de pantalla táctil) 
+- Fuente oficial altamente recomendada o en su defecto regulador (5V 3A)
+- Destornillador de cruz
+- Toalla antiestática
 
-#### Physical Initial Connection
-You can follow the steps in [this video](https://www.youtube.com/watch?v=SIUfAIiSzJA&ab_channel=MakeUseOf)
-- Place your towel on your working table, then the touchscreen display facing down
-- Insert the four power wires, and the DSI ribbon cable (blue side down). Ensure it is securely locked with the catch. It should look as it is shown in the following image:  
+### 1.  Conexión Física de Raspberry a Pantalla Táctil
+
+#### Conexión física inicial
+Puedes seguir los pasos en [este video](https://www.youtube.com/watch?v=SIUfAIiSzJA&ab_channel=MakeUseOf)
+
+- Extiende la toalla antiestatica en tu mesa de trabajo, y coloca la pantalla táctil boca abajo.
+- Inserta los cuatro cables puente y la cinta DSI (lado azul por abajo), como la foto. Asegurate de que el seguro de la cinta haga click antes de seguir con otro paso. Debería verse como la siguiente foto:  
 ![texto de prueba](assets/images/touchscreen-connection.jpg)
-The following colors are used:  
-*black* for GND  
-*yellow* for SCL  
-*green* for SDA  
-*red* for 5V  
+Los colores deben ser los siguientes:  
+*Negro* para GND  
+*Amarillo* para SCL  
+*Verde* para SDA  
+*Rojo* para 5V  
 
-- Mount the raspberry on top of the touchscreen, make sure the screw holes are correcly aligned.  
+- Una vez conectados los cables, monta el Raspberry arriba de la placa de la pantalla táctil, con los agujeros para atornillar correctamente posicionados  
 ![texto de prueba 2](assets/images/raspberry-on-top-of-touchscreen.jpg)
 
-- Use the screwdriver and the screws included in the box to secure the Raspberry Pi. Next, connect the jumper cables to the Raspberry in the correct order, and the DSI ribbon cable (again, blue side down), make sure it was securely locked in place.  
+Usa el destornillador y los tornillos incluidos en la caja para asegurar la Raspberry Pi. Luego, conecta los cables puente a la Raspberry en el orden correcto, y el cable plano DSI (nuevamente, con el lado azul hacia abajo). Asegúrate de que quede bien asegurado en su lugar.  
 ![texto de prueba 3](assets/images/raspberry-and-touchscreen-connection.jpg)
-This is the correct order to connect to the physical pins:  
+Este es el orden correcto para conectar los PINS físicos:
+Recomendación: consulta la tabla de Raspberry Pi disponible en este repositorio en assets/images/   
 BE CAREFUL TO USE PHYSICAL PINS AND NOT BCM
-*black* to physical pin 6 (GND)  
-*yellow* to physical pin 5 (GPIO/SCL1) **I2C**  
-*green* to phisical pin 3 (GPIO/SDA1) **I2C**  
-*red* to physical pin 4 (5V)  
+*Negro* en el pin físico 6 (GND)  
+*yellow* en el pin físico 5 (GPIO/SCL1) **I2C**  
+*green* en el pin físico 3 (GPIO/SDA1) **I2C**  
+*red* en el pin físico 4 (5V)  
 
 ### 2. Flash & Configure SD Card
 - In your computer, go to [this link](https://www.raspberrypi.com/software/) for the latest Raspberry Pi Imager
