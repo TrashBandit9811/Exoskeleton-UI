@@ -59,22 +59,22 @@ Los colores deben ser los siguientes:
 Usa el destornillador y los tornillos incluidos en la caja para asegurar la Raspberry Pi. Luego, conecta los cables puente a la Raspberry en el orden correcto, y el cable plano DSI (nuevamente, con el lado azul hacia abajo). Asegúrate de que quede bien asegurado en su lugar.  
 ![texto de prueba 3](assets/images/raspberry-and-touchscreen-connection.jpg)
 Este es el orden correcto para conectar los PINS físicos:
-Recomendación: consulta la tabla de Raspberry Pi disponible en este repositorio en assets/images/   
-BE CAREFUL TO USE PHYSICAL PINS AND NOT BCM
+Recomendación: consulta la tabla de Raspberry Pi disponible en este repositorio en assets/images/raspberry-pinout.
+TEN CUIDADO DE USAR LOS PINS FISICOS, NO LOS BCM
 *Negro* en el pin físico 6 (GND)  
 *yellow* en el pin físico 5 (GPIO/SCL1) **I2C**  
 *green* en el pin físico 3 (GPIO/SDA1) **I2C**  
 *red* en el pin físico 4 (5V)  
 
-### 2. Flash & Configure SD Card
-- In your computer, go to [this link](https://www.raspberrypi.com/software/) for the latest Raspberry Pi Imager
-- Download the version for your operating system
-- Insert your Micro SD card into your computer. Backup any data, the whole card will be **erased**
-- In Raspberry Pi Imager, click **Choose OS**, then select **Raspberry Pi OS (32-Bit)**
-- Click **Choose Storage** and select your Micro SD card.
-- *Optionally* click **Settings** to set hostname, enable SSH, and other configurations.
-- Click **Write** and wait for the program to download, flash and verify the image.
-- Once flashing is complete, eject your card properly and insert it into your Raspberry Pi's Micro SD slot  
+### 2. Grabar y configurar la tarjeta SD
+- En tu computadora, ve a [este link](https://www.raspberrypi.com/software/) para el sistema operativo de Raspberry Pi más reciente.
+- Descarga la versión para tu sistema operativo , abre el archivo y sigue el proceso de instalación
+- Inserta tu tarjeta Micro SD en tu lector. Respalda tu información, ya que todos los datos serán **borrados**.
+- En Raspberry Pi Imager, haz click en **Choose OS**, y después busca **Raspberry Pi OS (32-Bit)** y haz click.
+- Busca **Choose Storage** y haz click, después, selecciona tu tarjeta SD
+- *Opcionalment* da click en **Settings** para configurar el nombre del host, el SSH, y otras configuraciones.
+- Da click en **Write** y espera al programa para que baje el sistema opeativo y lo instale en la tarjeta. Debería tomar aproximadamente 10 minutos.
+- Una vez que la grabación esté completada, expulsa seguramente la tarjeta de tu computadora e insertala en la ranura de tu Raspberry Pi.
 
 - Once these steps are completed, mount your Raspberry touchscreen and Raspberry Pi to your frame. Be careful not to damage the jumper cables or the DSI ribbon. Use a screwdriver to hold it in place
 
