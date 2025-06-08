@@ -40,7 +40,7 @@ Este proyecto está diseñadp para cambio de modos en tiempo real, configuració
 
 ### 1.  Setup Raspberry Pi
 
-#### Physical Initial Connection
+#### Conexión física inicial
 You can follow the steps in [this video](https://www.youtube.com/watch?v=SIUfAIiSzJA&ab_channel=MakeUseOf)
 - Place your towel on your working table, then the touchscreen display facing down
 - Insert the four power wires, and the DSI ribbon cable (blue side down). Ensure it is securely locked with the catch. It should look as it is shown in the following image:  
@@ -63,7 +63,7 @@ BE CAREFUL TO USE PHYSICAL PINS AND NOT BCM
 *green* to phisical pin 3 (GPIO/SDA1) **I2C**  
 *red* to physical pin 4 (5V)  
 
-### 2. Flash & Configure SD Card
+### 2. Flashear y configurar la tarjeta SD
 - In your computer, go to [this link](https://www.raspberrypi.com/software/) for the latest Raspberry Pi Imager
 - Download the version for your operating system
 - Insert your Micro SD card into your computer. Backup any data, the whole card will be **erased**
