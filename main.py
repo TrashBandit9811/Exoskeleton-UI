@@ -14,6 +14,7 @@ RIGHT_LEDS = [16,20,21]
 class RokiScreen(BoxLayout):
     text = StringProperty("")
     battery_level = StringProperty("87%") # INVESTIGAR COMO OBTENER NIVEL DE BATERIA
+    #ESTA BATERIA SE REFIERE AL NIVEL DE LA BATERÍA DEL ROKI, es de donde mismo que se alimenta el Raspberry
 
     def _init_(self, **kwargs):
         super()._init_(**kwargs)

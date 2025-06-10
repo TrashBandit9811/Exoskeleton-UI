@@ -3,104 +3,118 @@
 
 Este proyecto es un sistema de menú gráfico creado con **Python** y **Kivy**, y diseñado para correr en un **Raspberry Pi 4** con una pantalla táctil oficial de 7"
 
-Este proyecto está diseñadp para cambio de modos en tiempo real, configuración y control intuitivo del exoesqueleto
+Este proyecto está diseñado para cambio de modos en tiempo real, configuración y control intuitivo del exoesqueleto
 
-## Features
+## Características
 
-- Full-screen 800x480 UI with touch and physical buttons
-- Operational mode for visual feedback
-- Buzzer-based feedback system
-- Clean hardware-software integration
+- Interfaz gráfica de pantalla completa 800x400px y botones físicos
+- Retroalimentación visual de las operaciones físicas
+- Retroalimentación con buzzer
+- Integración limpia de software-hardware
 
 ## Hardware
-| Component            | Details                          |
+| Componente            | Detalles                        |
 | ---------------------|----------------------------------|
-| Raspberry Pi         | 4 Model B (2GB RAM)              |
-| Touchscreen display  | 7" Official Raspberry Pi Display |
-| External Buttons     | GPIO-connected tactile switches  |
-| Audio Feedback       | Passive buzzer on GPIO           |
+| Raspberry Pi         | 4 Modelo B (2GB de RAM)          |
+| Display táctil       | Display oficial Raspberry de 7"  |
+| Botones externos     | Botones conectados a GPIO        |
+| Audio                | Buzzer pasivo en GPIO            |
 | Power Supply         | ???                              |
-| Micro SD card        | 32GB minumum, A1 or A2           |
+| Tarjeta microSD      | 32GB minimo, clase A1 o A2       |
 -----------------------------------------------------------
 
-## Setup Instructions
+## Instructiones de instalación
 
-#### Needed Hardware
-- Raspberry Pi 4 Model B
-- Official 7" Raspberry Pi Touschreen display
-- A computer (Windows, macOS or Linux)
-- Raspberry Pi Touchscreen Frame
-- Micro SD card (32GB minumum)
-- Micro SD card reader
-- 4 jumper cables (female to female)
-- DSI ribbon cable 
-- Official power supply highly recommended (5V 3A)
-- Screwdriver
-- Antistatic towel
+#### Hardware necesario
+- Raspberry Pi 4 Modelo B
+- Display oficial Raspberry de 7"
+- Una computdora (Windows, macOS o Linux)
+- Marco para sostener el Raspberry Pi
+- Tarjeta microSD (32GB minimo)
+- Lector de tarjetas microSD
+- 4 cables (hembra a hembra) YA incluidos en el paquete de la pantalla táctil
+- Cable plano DSI 
+- Fuente de poder oficial de Raspberry (5V 3A)
+- Destornillador de cruz
+- Toalla antiestática
+- Un teclado con USB
+- Un mouse con USB
 
-### 1.  Setup Raspberry Pi
+### 1.  Preparando el Raspberry
 
-#### Conexión física inicial
-You can follow the steps in [this video](https://www.youtube.com/watch?v=SIUfAIiSzJA&ab_channel=MakeUseOf)
-- Place your towel on your working table, then the touchscreen display facing down
-- Insert the four power wires, and the DSI ribbon cable (blue side down). Ensure it is securely locked with the catch. It should look as it is shown in the following image:  
+#### Conexión física inicial  
+
+- Pon tu toalla antiestática sobre tu mesa de trabajo, y encima la pantalla táctil con la pantalla hacia abajo
+- Inserta los cuatro cables de corriente, y el cable plano DSI (lado azul hacia abajo). Asegurate de escuchar un clic al cerrarel compartimento del DSI. Debería verse como la foto a continuación:  
 ![texto de prueba](assets/images/touchscreen-connection.jpg)
-The following colors are used:  
-*black* for GND  
-*yellow* for SCL  
-*green* for SDA  
-*red* for 5V  
+Esta es la simbología de los colores:  
+*negro* para GND  
+*amarillo* para SCL  
+*verde* para SDA  
+*rojo* para 5V  
 
-- Mount the raspberry on top of the touchscreen, make sure the screw holes are correcly aligned.  
+- Coloca el Raspberry Pi encima de los agujeros para atornillar de la pantalla. Asegurate de que queden correctamente alineados
 ![texto de prueba 2](assets/images/raspberry-on-top-of-touchscreen.jpg)
 
-- Use the screwdriver and the screws included in the box to secure the Raspberry Pi. Next, connect the jumper cables to the Raspberry in the correct order, and the DSI ribbon cable (again, blue side down), make sure it was securely locked in place.  
+- Usa los tornillos incluidos en tu paquete de pantalla tactil y con el destornillador en cruz asegura Raspberry Pi en su lugar. Después, conecta los cables en el orden correcto de la pantalla al Raspberry, y el cable plano DSI (de nuevo, lado azul hacia abajo), asegúrate de usar el orden adecuado.  
 ![texto de prueba 3](assets/images/raspberry-and-touchscreen-connection.jpg)
-This is the correct order to connect to the physical pins:  
-BE CAREFUL TO USE PHYSICAL PINS AND NOT BCM
-*black* to physical pin 6 (GND)  
-*yellow* to physical pin 5 (GPIO/SCL1) **I2C**  
-*green* to phisical pin 3 (GPIO/SDA1) **I2C**  
-*red* to physical pin 4 (5V)  
+Este es el orden correcto de colocar los cables:  
+ASEGURATE DE USAR LA GUIA EN assets/images/raspberrypinout.jpg, se habla de los cables FÍSICOS, NO los BCM
+*negro* para el pin físico 6 (GND)  
+*amarillo* para el pin físico 5 (GPIO/SCL1) **I2C**  
+*verde* para el pin físico 3 (GPIO/SDA1) **I2C**  
+*rojo* para el pin físico 4 (5V)  
 
 ### 2. Flashear y configurar la tarjeta SD
-- In your computer, go to [this link](https://www.raspberrypi.com/software/) for the latest Raspberry Pi Imager
-- Download the version for your operating system
-- Insert your Micro SD card into your computer. Backup any data, the whole card will be **erased**
-- In Raspberry Pi Imager, click **Choose OS**, then select **Raspberry Pi OS (32-Bit)**
-- Click **Choose Storage** and select your Micro SD card.
-- *Optionally* click **Settings** to set hostname, enable SSH, and other configurations.
-- Click **Write** and wait for the program to download, flash and verify the image.
-- Once flashing is complete, eject your card properly and insert it into your Raspberry Pi's Micro SD slot  
+- En tu computadora, ve a [este link](https://www.raspberrypi.com/software/) para la última versión estable de Raspberry Pi OS
+- Descarga la versión correcta para tu sistema operativo
+- Inserta tu tarjeta microSD en tu computadora. Respalda tu información, todo en la tarjeta será **borrado**
+- En Raspberry Pi Imager, haz clic en **Choose OS**, después selecciona **Raspberry Pi OS (32-Bit)**
+- Haz clic **Choose Storage** y selecciona tu tarjeta microSD.
+- *Opcionalmente* haz clic en **Settings** para configurar el hostname, activar SSH, y otras configuraciones.
+- Haz clic en **Write** y espera a que el programa descargue el sistema y lo instale en tu tarjeta microSD. Debería tomar 10 min en promedio.
+- Una vez que la instalación se complete, inserta la tarjeta en tu Raspberry Pi.
 
-- Once these steps are completed, mount your Raspberry touchscreen and Raspberry Pi to your frame. Be careful not to damage the jumper cables or the DSI ribbon. Use a screwdriver to hold it in place
+- Ya que se completen estos pasos, coloca todo en tu marco. Asegurate de manejar con cuidado los cables y el DSI. Usa el destornillador para cerrarlo.
 
-NOTE: if your Raspberry Pi screen is upside down, you will need to complete the following steps
-- Go to the terminal and run
+NOTA: Hay un error común que muestra la pantalla dada vuelta, si este es el caso para tí, necesitarás completar estos pasos adicionales al encender tu dispositivo.
+- Ve a la terminal y corre el comando
 ```bash
 sudo nano /boot/config.txt
 ```
-At the top of the file, add the following text:
+Se abrirá un archivo de texto, hasta arribla coloca las líneas:
 ```bash
 lcd_rotate=2
 ```
+RECORDAR AÑADIR UNA CAPTURA DE ESTO PARA QUE SE ENTIENDA MEJOR
 
 ### 3. Enable Interfaces
+Con tu raspberry encendido, ve a la terminal en AÑADIR UBICACIÓN DE LA TERMINAL, y corre los comandos
 ```bash
 sudo raspi-config
 ```
-- Use your arrow keys to navigate
-- Go to **Interface Options**
-- ??? Enable SSH
-- Enable I2C
-- Go back and go to **Advanced Options**, then select **Expand Filesystem**
+- Usa las flechas del teclado para navegar
+- Ve a **Interface Options**
+- ??? Activa SSH <-VER SI ES NECESARIO
+- Activa I2C
+- Regresa a **Advanced Options**, y después selecciona **Expand Filesystem**
 
+### 4.  la interfaz gráfica en el Raspberry
+- Ve a [esta pagina](https://github.com/TrashBandit9811/Exoskeleton-UI)
+- Haz clic en el botón azul "Code"
+- Selecciona **Download ZIP**
+- En tu navegador de archivos, anre 
+- descargar AÑADIR PASOS
+- pasar a la USB DESCRIBIR MEJOR
+- Expulsar de manera segura la USB
+- Insertar la USB en el Raspberry Pi
+- AÑADIR PASOS A HACER EN EL RASPBERRY PI
 
-### 4. Install Dependencies
+### 5. Instalar Dependencias
 - ???
 - ???
 
-### 5. Make App Run Automatically
+### 6. Make App Run Automatically
 - ???
 - ???
 
