@@ -103,7 +103,7 @@ sudo raspi-config
 - Ve a [esta pagina](https://github.com/TrashBandit9811/Exoskeleton-UI)
 - Haz clic en el botón azul "Code"
 - Selecciona **Download ZIP**
-- En tu navegador de archivos, anre 
+- En tu navegador de archivos, busca la carpeta y extrae su contenido
 - descargar AÑADIR PASOS
 - pasar a la USB DESCRIBIR MEJOR
 - Expulsar de manera segura la USB
