@@ -14,14 +14,14 @@ This project is designed for real-time mode switching, configuration, and intuit
 - Clean software-hardware integration
 
 ## Hardware
-| Component            | Details                          |
-| ---------------------|----------------------------------|
-| Raspberry Pi         | 4 Model B (2GB RAM)              |
-| Touchscreen          | Official Raspberry 7" screen     |
-| External buttons     | GPIO-connected buttons           |
-| Audio                | GPIO passive buzzer              |
-| Power Supply         | Official Raspberry supply        |
-| microSD Card         | 32GB minimum, A1 or A2           |
+| Component        | Details                      |
+| ---------------- | ---------------------------- |
+| Raspberry Pi     | 4 Model B (2GB RAM)          |
+| Touchscreen      | Official Raspberry 7" screen |
+| External buttons | GPIO-connected buttons       |
+| Audio            | GPIO passive buzzer          |
+| Power Supply     | Official Raspberry supply    |
+| microSD Card     | 32GB minimum, A1 or A2       |
 -----------------------------------------------------------
 
 ## Installation instructions
