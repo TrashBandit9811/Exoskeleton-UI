@@ -173,6 +173,20 @@ This step is not mandatory, but it is recommended for testing
 python3 main.py
 ```
 
+### 7. Make it run automatically on boot
+- Open the autostart file:
+```bash
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+```
+
+- Add this line to the bottom:
+```bash
+@python3 /home/pi/Exoskeleton-UI/main.py
+```
+Make sure the path and filename match your app
+
+- Save with Ctrl + O, press Enter, and exit with Ctrl + X
+
 ## Other important files
 For additional documentation, refer to:
 - **wiring.md**: GPIO pinout and button/buzzer connections
