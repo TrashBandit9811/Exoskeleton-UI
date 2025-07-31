@@ -101,6 +101,19 @@ lcd_rotate=2
 ![rotate-screen](assets/images/rotate-screen.png)
 How the code should look like
 
+After adding the line `lcd_rotate=2` in the terminal using `nano`, follow these steps to save and exit:
+
+1. Press `Ctrl + O` (that's the letter **O**, not zero) to **write (save) the file**.
+2. Press `Enter` to confirm the filename (`/boot/config.txt`).
+3. Press `Ctrl + X` to **exit** the `nano` editor.
+4. Back in the terminal, type:
+
+   ```bash
+   sudo reboot
+   ```
+   to restart the Raspberry Pi and apply the change.
+
+
 ### 3. Enable Interfaces
 Con tu raspberry encendido, ve a la terminal en AÑADIR UBICACIÓN DE LA TERMINAL, y corre los comandos
 ```bash
