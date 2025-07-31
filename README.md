@@ -1,26 +1,27 @@
 # 🦾 Exoskeleton UI
 # Raspberry Pi Touchscreen Interface
+This project is a graphical menu system built with Python and Kivy, designed to run on a Raspberry Pi 4 with the official 7" touchscreen.
 
-Este proyecto es un sistema de menú gráfico creado con **Python** y **Kivy**, y diseñado para correr en un **Raspberry Pi 4** con una pantalla táctil oficial de 7"
+This project is designed for real-time mode switching, configuration, and intuitive control of the exoskeleton.
 
-Este proyecto está diseñado para cambio de modos en tiempo real, configuración y control intuitivo del exoesqueleto
+## Features
+- Full-screen 800x400px graphical interface with physical buttons
 
-## Características
+- Visual feedback of physical operations
 
-- Interfaz gráfica de pantalla completa 800x400px y botones físicos
-- Retroalimentación visual de las operaciones físicas
-- Retroalimentación con buzzer
-- Integración limpia de software-hardware
+- Buzzer-based feedback
+
+- Clean software-hardware integration
 
 ## Hardware
-| Componente            | Detalles                        |
+| Component            | Details                          |
 | ---------------------|----------------------------------|
-| Raspberry Pi         | 4 Modelo B (2GB de RAM)          |
-| Display táctil       | Display oficial Raspberry de 7"  |
-| Botones externos     | Botones conectados a GPIO        |
-| Audio                | Buzzer pasivo en GPIO            |
-| Power Supply         | ???                              |
-| Tarjeta microSD      | 32GB minimo, clase A1 o A2       |
+| Raspberry Pi         | 4 Model B (2GB RAM)              |
+| Touchscreen          | Official Raspberry 7" screen     |
+| External buttons     | GPIO-connected buttons           |
+| Audio                | GPIO passive buzzer              |
+| Power Supply         | Official Raspberry supply        |
+| microSD Card         | 32GB minimum, A1 or A2           |
 -----------------------------------------------------------
 
 ## Instructiones de instalación
