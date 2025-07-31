@@ -139,8 +139,32 @@ sudo raspi-config
 - Paste it inside your home folder (or any directory you prefer, e.g., /home/pi/Exoskeleton-UI)
 
 ### 5. Install Dependencies
-- ???
-- ???
+
+* Open a **Terminal** window
+* Navigate to the folder you just copied:
+
+  ```bash
+  cd ~/Exoskeleton-UI
+  ```
+* Make sure you have `pip` installed. If not, install it:
+
+  ```bash
+  sudo apt update
+  sudo apt install python3-pip
+  ```
+* Install the required Python packages:
+
+  ```bash
+  pip3 install -r requirements.txt
+  ```
+
+  If the file `requirements.txt` does not exist, install manually:
+
+  ```bash
+  pip3 install kivy RPi.GPIO
+  ```
+
+---
 
 ### 6. Make App Run Automatically
 - ???
