@@ -187,6 +187,13 @@ Make sure the path and filename match your app
 
 - Save with Ctrl + O, press Enter, and exit with Ctrl + X
 
+### 8. Reboot and test
+- Reboot the raspberry pi
+```bash
+sudo reboot
+```
+Your app should run automatically on startup
+
 ## Other important files
 For additional documentation, refer to:
 - **wiring.md**: GPIO pinout and button/buzzer connections
