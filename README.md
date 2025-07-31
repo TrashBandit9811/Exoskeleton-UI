@@ -98,7 +98,8 @@ A text file will open — at the very top, add the line:
 lcd_rotate=2
 ```
 
-ADD IMAGE FOR BETTER UNDERSTANDING
+![rotate-screen](assets/images/rotate-screen.png)
+How the code should look like
 
 ### 3. Enable Interfaces
 Con tu raspberry encendido, ve a la terminal en AÑADIR UBICACIÓN DE LA TERMINAL, y corre los comandos
