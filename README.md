@@ -41,30 +41,36 @@ This project is designed for real-time mode switching, configuration, and intuit
 - Keyboard with USB
 - Mouse with USB
 
-### 1.  Preparando el Raspberry
+### 1. Raspberry Preparation
 
-#### Conexión física inicial  
+#### Initial physical connection  
 
-- Pon tu toalla antiestática sobre tu mesa de trabajo, y encima la pantalla táctil con la pantalla hacia abajo
-- Inserta los cuatro cables de corriente, y el cable plano DSI (lado azul hacia abajo). Asegurate de escuchar un clic al cerrarel compartimento del DSI. Debería verse como la foto a continuación:  
+- Place your anti-static towel on your work surface, and lay the touchscreen face down on it.
+- Insert the four power cables and the DSI ribbon cable (blue side facing down). Make sure you hear a click when closing the DSI connector. It should look like the photo below:
+
 ![texto de prueba](assets/images/touchscreen-connection.jpg)
-Esta es la simbología de los colores:  
-*negro* para GND  
-*amarillo* para SCL  
-*verde* para SDA  
-*rojo* para 5V  
+This is the color coding:
+*black* for GND
+*yellow* for SCL
+*green* for SDA
+*red* for 5V
 
-- Coloca el Raspberry Pi encima de los agujeros para atornillar de la pantalla. Asegurate de que queden correctamente alineados
+
+- Place the Raspberry Pi over the screw holes on the screen. Make sure they are properly aligned.
+
 ![texto de prueba 2](assets/images/raspberry-on-top-of-touchscreen.jpg)
 
-- Usa los tornillos incluidos en tu paquete de pantalla tactil y con el destornillador en cruz asegura Raspberry Pi en su lugar. Después, conecta los cables en el orden correcto de la pantalla al Raspberry, y el cable plano DSI (de nuevo, lado azul hacia abajo), asegúrate de usar el orden adecuado.  
+- Use the screws included in your touchscreen package and secure the Raspberry Pi in place using the Phillips screwdriver. Then, connect the cables from the screen to the Raspberry Pi in the correct order, and the DSI ribbon cable (again, blue side down). Make sure you follow the proper order.
+
 ![texto de prueba 3](assets/images/raspberry-and-touchscreen-connection.jpg)
-Este es el orden correcto de colocar los cables:  
-ASEGURATE DE USAR LA GUIA EN assets/images/raspberrypinout.jpg, se habla de los cables FÍSICOS, NO los BCM
-*negro* para el pin físico 6 (GND)  
-*amarillo* para el pin físico 5 (GPIO/SCL1) **I2C**  
-*verde* para el pin físico 3 (GPIO/SDA1) **I2C**  
-*rojo* para el pin físico 4 (5V)  
+Here is the correct order to connect the cables:
+**MAKE SURE TO USE THE GUIDE IN** `assets/images/raspberrypinout.jpg` — this refers to the **PHYSICAL pins**, NOT the BCM numbering.
+
+* *Black* → Physical pin 6 (**GND**)
+* *Yellow* → Physical pin 5 (**GPIO/SCL1**) **I2C**
+* *Green* → Physical pin 3 (**GPIO/SDA1**) **I2C**
+* *Red* → Physical pin 4 (**5V**)
+
 
 ### 2. Flashear y configurar la tarjeta SD
 - En tu computadora, ve a [este link](https://www.raspberrypi.com/software/) para la última versión estable de Raspberry Pi OS
