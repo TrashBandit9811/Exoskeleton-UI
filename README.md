@@ -24,22 +24,22 @@ This project is designed for real-time mode switching, configuration, and intuit
 | microSD Card         | 32GB minimum, A1 or A2           |
 -----------------------------------------------------------
 
-## Instructiones de instalación
+## Installation instructions
 
-#### Hardware necesario
-- Raspberry Pi 4 Modelo B
-- Display oficial Raspberry de 7"
-- Una computdora (Windows, macOS o Linux)
-- Marco para sostener el Raspberry Pi
-- Tarjeta microSD (32GB minimo)
-- Lector de tarjetas microSD
-- 4 cables (hembra a hembra) YA incluidos en el paquete de la pantalla táctil
-- Cable plano DSI 
-- Fuente de poder oficial de Raspberry (5V 3A)
-- Destornillador de cruz
-- Toalla antiestática
-- Un teclado con USB
-- Un mouse con USB
+#### Needed hardware
+- Raspberry Pi 4 Model B
+- Official Raspberry 7" screen
+- A computer (Windows, macOS or Linux)
+- Raspberry Pi Frame
+- MicroSD Card (32GB minimum)
+- MicroSD card reader
+- 4 (already included in the Touchscreen) jumper cables Socket to Socket
+- Ribbon cable DSI 
+- Official Raspberry Power Supply (5V 3A)
+- Screwdriver
+- Antistatic Towel
+- Keyboard with USB
+- Mouse with USB
 
 ### 1.  Preparando el Raspberry
 
