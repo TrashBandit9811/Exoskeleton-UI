@@ -136,7 +136,7 @@ sudo raspi-config
 - Insertar la USB en el Raspberry Pi
 - AÑADIR PASOS A HACER EN EL RASPBERRY PI
 
-### 5. Instalar Dependencias
+### 5. Install Dependencies
 - ???
 - ???
 
