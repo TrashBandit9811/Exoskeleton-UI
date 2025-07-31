@@ -125,15 +125,14 @@ sudo raspi-config
 - Activa I2C
 - Regresa a **Advanced Options**, y después selecciona **Expand Filesystem**
 
-### 4.  la interfaz gráfica en el Raspberry
-- Ve a [esta pagina](https://github.com/TrashBandit9811/Exoskeleton-UI)
-- Haz clic en el botón azul "Code"
-- Selecciona **Download ZIP**
-- En tu navegador de archivos, busca la carpeta y extrae su contenido
-- descargar AÑADIR PASOS
-- pasar a la USB DESCRIBIR MEJOR
-- Expulsar de manera segura la USB
-- Insertar la USB en el Raspberry Pi
+### 4. Install the UI on the raspberry
+- Go to [this page](https://github.com/TrashBandit9811/Exoskeleton-UI)
+- Click on the blue botton named "Code"
+- Select **Download ZIP**
+- In your file explorer, look for the file and right-click it, then click "Extract files"
+- Insert your USB and copy the contents of the extracted file inside
+- Eject the USB safely
+- Insert the USB in a Raspberry port
 - AÑADIR PASOS A HACER EN EL RASPBERRY PI
 
 ### 5. Install Dependencies
