@@ -48,7 +48,7 @@ This project is designed for real-time mode switching, configuration, and intuit
 - Place your anti-static towel on your work surface, and lay the touchscreen face down on it.
 - Insert the four power cables and the DSI ribbon cable (blue side facing down). Make sure you hear a click when closing the DSI connector. It should look like the photo below:
 
-![texto de prueba](assets/images/touchscreen-connection.jpg)
+![touchscreen-connection](assets/images/touchscreen-connection.jpg)
 This is the color coding:
 *black* for GND
 *yellow* for SCL
@@ -58,11 +58,11 @@ This is the color coding:
 
 - Place the Raspberry Pi over the screw holes on the screen. Make sure they are properly aligned.
 
-![texto de prueba 2](assets/images/raspberry-on-top-of-touchscreen.jpg)
+![raspberry-on-top-of-touchscreen](assets/images/raspberry-on-top-of-touchscreen.jpg)
 
 - Use the screws included in your touchscreen package and secure the Raspberry Pi in place using the Phillips screwdriver. Then, connect the cables from the screen to the Raspberry Pi in the correct order, and the DSI ribbon cable (again, blue side down). Make sure you follow the proper order.
 
-![texto de prueba 3](assets/images/raspberry-and-touchscreen-connection.jpg)
+![raspberry-and-touchscreen-connection](assets/images/raspberry-and-touchscreen-connection.jpg)
 Here is the correct order to connect the cables:
 **MAKE SURE TO USE THE GUIDE IN** `assets/images/raspberrypinout.jpg` — this refers to the **PHYSICAL pins**, NOT the BCM numbering.
 
@@ -72,28 +72,33 @@ Here is the correct order to connect the cables:
 * *Red* → Physical pin 4 (**5V**)
 
 
-### 2. Flashear y configurar la tarjeta SD
-- En tu computadora, ve a [este link](https://www.raspberrypi.com/software/) para la última versión estable de Raspberry Pi OS
-- Descarga la versión correcta para tu sistema operativo
-- Inserta tu tarjeta microSD en tu computadora. Respalda tu información, todo en la tarjeta será **borrado**
-- En Raspberry Pi Imager, haz clic en **Choose OS**, después selecciona **Raspberry Pi OS (32-Bit)**
-- Haz clic **Choose Storage** y selecciona tu tarjeta microSD.
-- *Opcionalmente* haz clic en **Settings** para configurar el hostname, activar SSH, y otras configuraciones.
-- Haz clic en **Write** y espera a que el programa descargue el sistema y lo instale en tu tarjeta microSD. Debería tomar 10 min en promedio.
-- Una vez que la instalación se complete, inserta la tarjeta en tu Raspberry Pi.
+### 2. Flash and Configure the SD card
 
-- Ya que se completen estos pasos, coloca todo en tu marco. Asegurate de manejar con cuidado los cables y el DSI. Usa el destornillador para cerrarlo.
+- On your computer, go to [this link](https://www.raspberrypi.com/software/) for the latest stable version of Raspberry Pi OS
+- Download the correct version for your operating system
+- Insert your microSD card into your computer. Back up your data — everything on the card will be **erased**
+- In Raspberry Pi Imager, click **Choose OS**, then select **Raspberry Pi OS (32-Bit)**
+- Click **Choose Storage** and select your microSD card
+- *Optionally*, click **Settings** to configure the hostname, enable SSH, and other settings
+- Click **Write** and wait for the program to download the system and install it on your microSD card. This should take around 10 minutes on average
+- Once the installation is complete, insert the card into your Raspberry Pi
+- Once these steps are complete, place everything into your frame. Be careful when handling the cables and the DSI ribbon. Use the screwdriver to close it up
 
-NOTA: Hay un error común que muestra la pantalla dada vuelta, si este es el caso para tí, necesitarás completar estos pasos adicionales al encender tu dispositivo.
-- Ve a la terminal y corre el comando
+**NOTE:** A common issue is that the screen appears upside down. If this happens to you, you’ll need to complete these additional steps when powering on the device:
+
+* Open the terminal and run the command:
+
 ```bash
 sudo nano /boot/config.txt
 ```
-Se abrirá un archivo de texto, hasta arribla coloca las líneas:
+
+A text file will open — at the very top, add the line:
+
 ```bash
 lcd_rotate=2
 ```
-RECORDAR AÑADIR UNA CAPTURA DE ESTO PARA QUE SE ENTIENDA MEJOR
+
+ADD IMAGE FOR BETTER UNDERSTANDING
 
 ### 3. Enable Interfaces
 Con tu raspberry encendido, ve a la terminal en AÑADIR UBICACIÓN DE LA TERMINAL, y corre los comandos
