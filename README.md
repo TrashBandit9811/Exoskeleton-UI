@@ -133,7 +133,10 @@ sudo raspi-config
 - Insert your USB and copy the contents of the extracted file inside
 - Eject the USB safely
 - Insert the USB in a Raspberry port
-- AÑADIR PASOS A HACER EN EL RASPBERRY PI
+- On your Raspberry Pi, open the File Manager
+- Find and open the USB drive
+- Copy the entire folder of the extracted project
+- Paste it inside your home folder (or any directory you prefer, e.g., /home/pi/Exoskeleton-UI)
 
 ### 5. Install Dependencies
 - ???
