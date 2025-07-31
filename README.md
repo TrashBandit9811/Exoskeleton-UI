@@ -166,9 +166,12 @@ sudo raspi-config
 
 ---
 
-### 6. Make App Run Automatically
-- ???
-- ???
+### 6. Run Application Manually
+This step is not mandatory, but it is recommended for testing
+- In the same terminal, run the app with:
+```bash
+python3 main.py
+```
 
 ## Other important files
 For additional documentation, refer to:
