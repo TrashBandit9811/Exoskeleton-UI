@@ -1,9 +1,9 @@
-from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.boxlayout import BoxLayout
-from kivy.properties import StringProperty
-from kivy.uix.button import Button
-import RPi.GPIO as GPIO
+from kivy.app import App # pyright: ignore[reportMissingImports]
+from kivy.uix.label import Label # pyright: ignore[reportMissingImports]
+from kivy.uix.boxlayout import BoxLayout # pyright: ignore[reportMissingImports]
+from kivy.properties import StringProperty # pyright: ignore[reportMissingImports]
+from kivy.uix.button import Button # pyright: ignore[reportMissingImports]
+import RPi.GPIO as GPIO # pyright: ignore[reportMissingModuleSource]
 
 # LEFT pins
 LEFT_LEDS = [17,27,22]
