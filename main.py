@@ -21,6 +21,8 @@ i2c = busio.I2C(board.SCL, board.SDA)
 ads = ADS.ADS1115(i2c)
 chan = AnalogIn(ads, ADS.P0)  # Using channel 0 of ADS1115
 
+VOLTAGE_DIVIDER_RATIO = 5.0  # SAFE voltage measurement for a 12V, 12/2.4=5.0
+
 class RokiScreen(BoxLayout):
     text = StringProperty("")
     battery_level = StringProperty("87%") # INVESTIGAR COMO OBTENER NIVEL DE BATERIA
