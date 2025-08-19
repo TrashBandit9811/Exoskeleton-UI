@@ -4,6 +4,11 @@ from kivy.uix.boxlayout import BoxLayout # pyright: ignore[reportMissingImports]
 from kivy.properties import StringProperty # pyright: ignore[reportMissingImports]
 from kivy.uix.button import Button # pyright: ignore[reportMissingImports]
 import RPi.GPIO as GPIO # pyright: ignore[reportMissingModuleSource]
+import time
+import board
+import busio
+import adafruit_ads1x15.ads1115 as ADS
+from adafruit_ads1x15.analog_in import AnalogIn
 
 # LEFT pins
 LEFT_LEDS = [17,27,22]
