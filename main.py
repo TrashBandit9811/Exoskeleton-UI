@@ -23,6 +23,11 @@ chan = AnalogIn(ads, ADS.P0)  # Using channel 0 of ADS1115
 
 VOLTAGE_DIVIDER_RATIO = 5.0  # SAFE voltage measurement for a 12V, 12/2.4=5.0
 
+def get_battery_voltage():
+    measured_voltage = chan.voltage
+    battery_voltage = measured_voltage * VOLTAGE_DIVIDER_RATIO
+    return battery_voltage
+
 class RokiScreen(BoxLayout):
     text = StringProperty("")
     battery_level = StringProperty("87%") # INVESTIGAR COMO OBTENER NIVEL DE BATERIA
