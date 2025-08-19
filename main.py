@@ -16,6 +16,11 @@ LEFT_LEDS = [17,27,22]
 # RIGHT pins
 RIGHT_LEDS = [16,20,21]
 
+# Initialize I2C and ADC
+i2c = busio.I2C(board.SCL, board.SDA)
+ads = ADS.ADS1115(i2c)
+chan = AnalogIn(ads, ADS.P0)  # Using channel 0 of ADS1115
+
 class RokiScreen(BoxLayout):
     text = StringProperty("")
     battery_level = StringProperty("87%") # INVESTIGAR COMO OBTENER NIVEL DE BATERIA
