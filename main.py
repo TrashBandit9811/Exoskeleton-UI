@@ -28,6 +28,16 @@ def get_battery_voltage():
     battery_voltage = measured_voltage * VOLTAGE_DIVIDER_RATIO
     return battery_voltage
 
+def get_battery_percentage():
+    v = get_battery_voltage()
+    # 12V lead-acid battery
+    if v >= 12.6:
+        return 100
+    elif v <= 11.8:
+        return 0
+    else:
+        return int((v - 11.8) / (12.6 - 11.8) * 100)
+
 class RokiScreen(BoxLayout):
     text = StringProperty("")
 
