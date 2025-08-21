@@ -137,3 +137,6 @@ class RokiApp(App):
 if __name__ == '__main__':
     RokiApp().run()
     GPIO.cleanup()
+    print(f"Battery Voltage: {get_battery_voltage():.2f} V")
+    print(f"Battery Level: {get_battery_percentage()} %")
+    time.sleep(2)
