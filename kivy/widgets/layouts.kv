@@ -10,6 +10,24 @@
         size_hint_y: 0.2
         spacing: 10
 
+        # Battery icon + % label
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_x: 0.3
+            spacing: 5
+            Image:
+                source: "assets/battery.png"  # YET TO REPLACE
+                size_hint_x: 0.4
+                allow_stretch: True
+            # YET TO GET REAL BATTERY LEVEL
+            Label:
+                id: battery_label
+                text: "87%"
+                color: 0,1,0,1  # green
+                font_size: "20sp"
+                halign: "left"
+                valign: "middle"
+
     # --- Middle section (2 stickmen) ---
     BoxLayout:
         size_hint_y: 0.8
