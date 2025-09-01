@@ -40,3 +40,19 @@
         size_hint_y: 0.8
         spacing: 40
         padding: 40
+
+        # Stand icon + text
+        BoxLayout:
+            orientation: "vertical"
+            spacing: 10
+            Image:
+                id: stand_icon
+                source: "assets/stand.png"
+                allow_stretch: True
+            Button:
+                text: "Ir a parado"
+                color: 0,0,1,1  # blue
+                font_size: "20sp"
+                background_normal: ""
+                background_color: 0,0,0,0
+                on_release: app.go_stand()
