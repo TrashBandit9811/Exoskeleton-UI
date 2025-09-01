@@ -47,7 +47,7 @@
             spacing: 10
             Image:
                 id: stand_icon
-                source: "assets/stand.png"
+                source: "assets/stand.png" # Placeholder
                 allow_stretch: True
             Button:
                 text: "Ir a parado"
@@ -56,3 +56,19 @@
                 background_normal: ""
                 background_color: 0,0,0,0
                 on_release: app.go_stand()
+        
+        # Sit icon + text
+        BoxLayout:
+            orientation: "vertical"
+            spacing: 10
+            Image:
+                id: sit_icon
+                source: "assets/sit.png" # Placeholder
+                allow_stretch: True
+            Button:
+                text: "Ir a sentado"
+                color: 1,0,0,1  # red
+                font_size: "20sp"
+                background_normal: ""
+                background_color: 0,0,0,0
+                on_release: app.go_sit()
