@@ -1,5 +1,7 @@
 from kivy.app import App # pyright: ignore[reportMissingImports]
+from kivy.lang import Builder # pyright: ignore[reportMissingImports]
 from kivy.uix.label import Label # pyright: ignore[reportMissingImports]
+from kivy.app import Widget # pyright: ignore[reportMissingImports]
 from kivy.uix.boxlayout import BoxLayout # pyright: ignore[reportMissingImports]
 from kivy.properties import StringProperty # pyright: ignore[reportMissingImports]
 from kivy.uix.button import Button # pyright: ignore[reportMissingImports]
