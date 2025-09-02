@@ -141,7 +141,7 @@ class MainScreen(BoxLayout):
 
 class MyApp(App):
     def build(self):
-        return Builder.load_file("layouts.kv")
+        return Builder.load_file("kivy/widgets/layouts.kv")
 
 if __name__ == '__main__':
     RokiApp().run()
