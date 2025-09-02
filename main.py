@@ -136,6 +136,9 @@ class RokiApp(App):
         #Resetear LEDs al cerrar la aplicación
         GPIO.cleanup()
 
+class MainScreen(BoxLayout):
+    pass
+
 if __name__ == '__main__':
     RokiApp().run()
     GPIO.cleanup()
