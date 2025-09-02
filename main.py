@@ -139,6 +139,10 @@ class RokiApp(App):
 class MainScreen(BoxLayout):
     pass
 
+class MyApp(App):
+    def build(self):
+        return Builder.load_file("layouts.kv")
+
 if __name__ == '__main__':
     RokiApp().run()
     GPIO.cleanup()
