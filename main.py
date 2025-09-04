@@ -6,9 +6,21 @@ from kivy.uix.boxlayout import BoxLayout # pyright: ignore[reportMissingImports]
 from kivy.properties import StringProperty # pyright: ignore[reportMissingImports]
 from kivy.uix.button import Button # pyright: ignore[reportMissingImports]
 import time
-import board
-import busio
-import adafruit_ads1x15.ads1115 as ADS
+try:
+    import board
+    import busio
+    from adafruit_ads1x15.analog_in import AnalogIn
+    import adafruit_ads1x15.ads1115 as ADS
+except ImportError:
+    print("[Mock] Hardware modules not found, running in UI-only mode.")
+
+    # Fake classes so the rest of your code doesn’t break
+    class AnalogIn:
+        def __init__(self, *args, **kwargs):
+            self.voltage = 3.3  # pretend we always read 3.3V
+
+    class ADS:
+        P0 = 0
 
 try:
     import RPi.GPIO as GPIO
