@@ -5,11 +5,28 @@ from kivy.app import Widget # pyright: ignore[reportMissingImports]
 from kivy.uix.boxlayout import BoxLayout # pyright: ignore[reportMissingImports]
 from kivy.properties import StringProperty # pyright: ignore[reportMissingImports]
 from kivy.uix.button import Button # pyright: ignore[reportMissingImports]
-import RPi.GPIO as GPIO # pyright: ignore[reportMissingModuleSource]
 import time
 import board
 import busio
 import adafruit_ads1x15.ads1115 as ADS
+
+try:
+    import RPi.GPIO as GPIO
+except (ImportError, RuntimeError):
+    # Create a fake GPIO module for testing on non-Raspberry systems
+    class MockGPIO:
+        BCM = "BCM"
+        OUT = "OUT"
+        LOW = "LOW"
+
+        def setmode(self, mode): print(f"[MockGPIO] setmode({mode})")
+        def setup(self, pin, mode): print(f"[MockGPIO] setup(pin={pin}, mode={mode})")
+        def output(self, pin, value): print(f"[MockGPIO] output(pin={pin}, value={value})")
+        def cleanup(self): print("[MockGPIO] cleanup()")
+
+    GPIO = MockGPIO()
+
+
 from adafruit_ads1x15.analog_in import AnalogIn
 
 # LEFT pins
