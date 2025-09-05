@@ -9,18 +9,18 @@ import time
 try:
     import board
     import busio
-    from adafruit_ads1x15.analog_in import AnalogIn
     import adafruit_ads1x15.ads1115 as ADS
+    from adafruit_ads1x15.analog_in import AnalogIn
 except ImportError:
-    print("[Mock] Hardware modules not found, running in UI-only mode.")
-
-    # Fake classes so the rest of your code doesn’t break
-    class AnalogIn:
-        def __init__(self, *args, **kwargs):
-            self.voltage = 3.3  # pretend we always read 3.3V
+    print("[Mock] ADS1115 modules not found, running in UI-only mode.")
 
     class ADS:
         P0 = 0
+
+    class AnalogIn:
+        def __init__(self, *args, **kwargs):
+            self.voltage = 3.7  # pretend battery is 3.7V
+
 
 try:
     import RPi.GPIO as GPIO
