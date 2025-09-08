@@ -106,6 +106,57 @@ class RokiApp(App):
         return screen
     
     """
+    INICIO
+
+1. ENCENDER sistema
+   - Revisar nivel de batería
+   - Revisar conexión de sensores y motores
+   - Activar interfaz de usuario
+
+2. ESPERAR comando del usuario
+   - Botón táctil en pantalla
+   - Señal externa (ej. joystick, botón físico)
+
+3. SELECCIONAR modo de movimiento
+   - CAMINAR
+   - SENTARSE
+   - LEVANTARSE
+   - PARAR (modo seguro)
+
+4. SI modo = CAMINAR
+      a. Verificar equilibrio con sensores (giroscopio / acelerómetro)
+      b. Activar secuencia de pasos:
+          - Mover pierna izquierda hacia adelante
+          - Mover pierna derecha hacia adelante
+          - Repetir ciclo
+      c. Ajustar velocidad según configuración
+
+5. SI modo = SENTARSE
+      a. Flexionar rodillas lentamente
+      b. Inclinar cadera hacia atrás
+      c. Bajar hasta detectar presión en asiento
+      d. Detener motores
+
+6. SI modo = LEVANTARSE
+      a. Revisar que el usuario esté estable
+      b. Extender rodillas
+      c. Elevar cadera hacia arriba
+      d. Detener en posición de pie
+
+7. MONITOREAR constantemente
+   - Sensores de seguridad (obstáculos, caídas, sobrecarga)
+   - Nivel de batería
+   - Botón de emergencia
+
+8. SI emergencia detectada
+      a. Detener todos los motores
+      b. Emitir alerta sonora y visual
+      c. Esperar reinicio manual
+
+9. REPETIR el ciclo mientras el sistema esté encendido
+
+FIN
+
     Inicio
     MODO 0
     cambiar modo a "INICIO"
